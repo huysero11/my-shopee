@@ -1,0 +1,90 @@
+.app-header-container {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  color: white;
+  margin: 0;
+  padding: 0 40px;
+  height: 120px;
+  /* background-color: rgb(245, 112, 29); */
+  background-image: linear-gradient(rgb(255, 38, 0), rgb(243, 84, 26));
+  opacity: 0.9;
+}
+
+.app-header-upper-part {
+  height: 30%;
+  width: 100%;
+  flex-shrink: 0;
+  /* background-color: blue; */
+  color: white;
+}
+
+.divider {
+  background-color: white;
+  opacity: 0.7;
+}
+
+.app-header-upper-part .upper-part-option {
+  font-size: 14px;
+}
+
+.app-header-upper-part .upper-part-option:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.upper-part-left .upper-part-option.no-hover:hover {
+  cursor: default;
+  opacity: 1;
+}
+
+.upper-part-option .facebook-icon:hover,
+.upper-part-option .instagram-icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.upper-part-right .upper-part-option {
+  margin-right: 10px;
+}
+
+.upper-part-option.no-margin {
+  margin-right: 0;
+}
+
+.search-bar {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  background-color: white;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.search-bar .input-text-area {
+  flex: 1;
+  border-color: transparent;
+}
+
+.search-bar .input-text-area:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.search-bar .input-text-area::placeholder {
+  color: black;
+  opacity: 0.6;
+}
+
+.search-button:hover {
+  opacity: 0.8;
+}
+
+/* lower part */
+.lower-part-option:hover {
+  cursor: pointer;
+}
+
+.cart-icon-container:hover {
+  cursor: pointer;
+}
