@@ -143,7 +143,7 @@ const AppHeader = () => {
             </div>
             <Flex
               justify="space-around"
-              style={{ fontSize: "12px", padding: "5px 0" }}
+              style={{ fontSize: "13px", padding: "5px 0" }}
             >
               <span className="lower-part-option">Dây đeo kính</span>
               <span className="lower-part-option">Áo sơ mi nam tay ngắn</span>

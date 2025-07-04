@@ -23,7 +23,7 @@
 }
 
 .app-header-upper-part .upper-part-option {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .app-header-upper-part .upper-part-option:hover {
@@ -43,7 +43,7 @@
 }
 
 .upper-part-right .upper-part-option {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .upper-part-option.no-margin {
