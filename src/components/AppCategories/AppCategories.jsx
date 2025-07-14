@@ -65,10 +65,10 @@ const AppCategories = () => {
           );
         })}
       </div>
-      <div
+      {/* <div
         className="box"
         style={{ height: "100px", backgroundColor: "white", margin: "20px" }}
-      ></div>
+      ></div> */}
     </div>
   );
 };
