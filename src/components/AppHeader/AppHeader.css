@@ -5,8 +5,9 @@
   padding: 0 40px;
   height: 120px;
   /* background-color: rgb(245, 112, 29); */
-  background-image: linear-gradient(rgb(255, 38, 0), rgb(243, 84, 26));
-  opacity: 0.9;
+  background-image: linear-gradient(rgb(252, 61, 32), rgb(255, 94, 36));
+  /* opacity: 0.9; */
+  z-index: 1000;
 }
 
 .app-header-upper-part {

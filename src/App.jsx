@@ -1,5 +1,6 @@
 import AppHeader from "./components/AppHeader/AppHeader.jsx";
 import AppBanners from "./components/AppBanners/AppBanners.jsx";
+import AppCategories from "./components/AppCategories/AppCategories.jsx";
 import { Affix } from "antd";
 import "./App.css";
 
@@ -10,6 +11,7 @@ const App = () => {
         <AppHeader />
       </Affix>
       <AppBanners />
+      <AppCategories />
     </>
   );
 };
