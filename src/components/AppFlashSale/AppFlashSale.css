@@ -1,0 +1,126 @@
+.flashsale-container {
+  height: 310px;
+  background-color: white;
+  margin: 20px 30px;
+  padding: 0 5px;
+}
+
+.upper-part-container {
+  width: 100%;
+  height: 60px;
+  /* background-color: rgb(243, 212, 212); */
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-part {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.left-part .ant-typography {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.right-part {
+  margin-right: 20px;
+}
+
+.right-part .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(255, 94, 36);
+}
+
+.right-part .text:hover {
+  cursor: pointer;
+}
+
+/* lower part ----------------------------------------------------------------------------------------------*/
+.lower-part {
+  padding: 0;
+  height: 250px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-container:hover {
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container > img {
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  object-fit: contain;
+  background-color: #fafafa;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(255, 68, 0);
+  background-color: #fcd965;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.date-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: blue;
+  font-weight: 700;
+  border: 1.5px solid rgb(255, 94, 36);
+  background-color: rgb(248, 189, 78);
+  width: 40px;
+}
+
+.product-price {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-price .price {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(255, 94, 36);
+  margin-bottom: 7px;
+}
+
+.product-price .status {
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 25px;
+  margin-top: 4px;
+  background: linear-gradient(to right, #f7432f, #ffa15c);
+  color: white;
+  font-size: 12px;
+  border-radius: 12px;
+}
