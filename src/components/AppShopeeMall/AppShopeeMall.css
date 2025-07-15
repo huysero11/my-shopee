@@ -1,0 +1,50 @@
+.container {
+  height: 550px;
+  margin: 20px 30px;
+  background-color: pink;
+}
+
+.upper-part {
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: rgb(172, 249, 223);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopee-mall-text {
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 500;
+  color: rgb(208, 1, 27);
+  cursor: pointer;
+}
+
+.upper-part-left-text {
+  font-size: 16px;
+  height: 20px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.upper-part-left-icon {
+  color: white;
+  background-color: rgb(208, 1, 27);
+  border-radius: 50%;
+}
+
+.upper-part-right-text {
+  margin-right: 6px;
+  font-weight: 400;
+  color: rgb(208, 1, 27);
+  cursor: pointer;
+}
+
+.upper-part-right-icon {
+  color: white;
+  background-color: rgb(208, 1, 27);
+  border-radius: 50%;
+  cursor: pointer;
+}
