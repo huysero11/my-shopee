@@ -22,8 +22,8 @@ const lower_part_image_path = [
 ];
 const lower_part_text = [
   "Mã Giảm Giá",
-  "Hàng Chọn Giá Hời",
-  "Deal Hot Giờ Vàng",
+  "Hàng Chọn\nGiá Hời",
+  "Deal Hot\nGiờ Vàng",
   "Shopee Style Voucher 30%",
   "Săn Ngày 100.000 Xu",
   "Khách Hàng Thân Thiết",
