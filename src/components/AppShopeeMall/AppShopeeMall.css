@@ -1,10 +1,10 @@
-.container {
+.shopee-mall-container {
   height: 550px;
   margin: 20px 30px;
   background-color: pink;
 }
 
-.upper-part {
+.shopee-mall-container .upper-part {
   height: 60px;
   box-sizing: border-box;
   padding: 0 20px;

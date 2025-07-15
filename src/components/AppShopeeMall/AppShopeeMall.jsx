@@ -10,7 +10,7 @@ import {
 const AppShopeeMall = () => {
   return (
     <>
-      <div className="container">
+      <div className="shopee-mall-container">
         <div className="upper-part">
           <div className="left">
             <Space className="upper-part-left-space" size={15}>
