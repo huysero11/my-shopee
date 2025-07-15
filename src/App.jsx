@@ -2,6 +2,7 @@ import AppHeader from "./components/AppHeader/AppHeader.jsx";
 import AppBanners from "./components/AppBanners/AppBanners.jsx";
 import AppCategories from "./components/AppCategories/AppCategories.jsx";
 import AppFlashSale from "./components/AppFlashSale/AppFlashSale.jsx";
+import AppAdditionalBanners from "./components/AppAdditionalBannerss/AppAdditionalBanners.jsx";
 import { Affix } from "antd";
 import "./App.css";
 
@@ -14,7 +15,7 @@ const App = () => {
       <AppBanners />
       <AppCategories />
       <AppFlashSale />
-      {/* Add more components as needed */}
+      <AppAdditionalBanners />
     </>
   );
 };

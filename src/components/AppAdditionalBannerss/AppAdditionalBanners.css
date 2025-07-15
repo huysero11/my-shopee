@@ -1,0 +1,7 @@
+.app-additional-banners {
+  height: 120px;
+  margin: 0 30px;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: rgb(255, 187, 0);
+}
