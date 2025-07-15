@@ -1,17 +1,18 @@
 .shopee-mall-container {
   height: 550px;
   margin: 20px 30px;
-  background-color: pink;
+  background-color: white;
 }
 
 .shopee-mall-container .upper-part {
   height: 60px;
   box-sizing: border-box;
   padding: 0 20px;
-  background-color: rgb(172, 249, 223);
+  /* background-color: rgb(172, 249, 223); */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 
 .shopee-mall-text {
@@ -20,6 +21,11 @@
   font-weight: 500;
   color: rgb(208, 1, 27);
   cursor: pointer;
+}
+
+.divider {
+  background-color: rgb(188, 188, 188);
+  height: 20px;
 }
 
 .upper-part-left-text {

@@ -16,7 +16,7 @@ const AppShopeeMall = () => {
             <Space className="upper-part-left-space" size={15}>
               <Typography.Text className="shopee-mall-text">
                 SHOPEE MALL
-                <Divider type="vertical" />
+                <Divider type="vertical" className="divider" />
               </Typography.Text>
 
               <Typography.Text className="upper-part-left-text">
