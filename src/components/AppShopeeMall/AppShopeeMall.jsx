@@ -120,37 +120,19 @@ const AppShopeeMall = () => {
                     </Row>
                   </div>
                 ))}
-                {/* {[0, 1].map((page) => (
-                  <div key={page}>
-                    <Row gutter={[5, 5]}>
-                      {Array.from({ length: 8 }).map((_, i) => (
-                        <Col key={i} span={6}>
-                          <div
-                            style={{
-                              // width: "100%",
-                              height: "calc(410px / 2 - 2.5px)",
-                              backgroundColor: "#ddd",
-                              borderRadius: 4,
-                            }}
-                          />
-                        </Col>
-                      ))}
-                    </Row>
-                  </div>
-                ))} */}
               </Carousel>
             </Col>
           </Row>
         </div>
       </div>
-      <div
+      {/* <div
         className="box"
         style={{
           height: "400px",
           backgroundColor: "white",
           margin: "20px 30px",
         }}
-      ></div>
+      ></div> */}
     </>
   );
 };

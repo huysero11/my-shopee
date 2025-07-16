@@ -1,0 +1,112 @@
+.app-top-searching-container {
+  height: 350px;
+  background-color: white;
+  margin: 20px 30px;
+}
+
+.app-top-searching-container .upper-part {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-sizing: border-box;
+  padding: 0 20px;
+  /* background-color: rgb(211, 255, 192); */
+}
+
+.app-top-searching-container .upper-part .left {
+  color: rgb(238, 77, 45);
+  font-size: 16px;
+  line-height: 19.2px;
+}
+
+.app-top-searching-container .upper-part .right {
+  color: rgb(238, 77, 45);
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.app-top-searching-container .lower-part {
+  height: 290px;
+  /* background-color: lightcoral; */
+}
+
+.app-top-searching-container .lower-part .product-container {
+  display: flex;
+  height: 265px;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  /* background-color: rgb(206, 245, 245); */
+}
+
+.app-top-searching-container .lower-part .product-container .image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  /* background-color: rgb(16, 250, 172); */
+}
+
+.app-top-searching-container
+  .lower-part
+  .product-container
+  .image-wrapper
+  > img {
+  height: 180px;
+  width: 180px;
+  object-fit: contain;
+}
+
+.app-top-searching-container
+  .lower-part
+  .product-container
+  .image-wrapper
+  .top-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 5px;
+  background: linear-gradient(180deg, #f07e2d, #f7571c);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  clip-path: polygon(
+    0% 0%,
+    /* top‑left corner */ 100% 0%,
+    /* top‑right corner */ 100% 80%,
+    /* right before triangle */ 50% 100%,
+    /* tip of triangle */ 0% 80% /* left before triangle */
+  );
+}
+
+.app-top-searching-container
+  .lower-part
+  .product-container
+  .image-wrapper
+  .sales-figures {
+  height: 25px;
+  width: 100%;
+  background-color: grey;
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.app-top-searching-container .lower-part .product-container .text-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+  /* flex: 1; */
+  width: 100%;
+  color: rgb(85, 85, 85);
+  font-size: 18px;
+  line-height: 25px;
+  /* background-color: rgb(170, 170, 227); */
+}
