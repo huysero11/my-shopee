@@ -52,7 +52,7 @@ const AppFlashSale = () => {
         </div>
       </Flex>
       <div className="lower-part">
-        <Carousel className="flashsale-carousel" arrows dots={false}>
+        <Carousel className="flashsale-carousel" arrows dots={false} autoplay>
           {[0, 1, 2].map((row_item) => {
             return (
               <div>
