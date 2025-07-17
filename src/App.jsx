@@ -5,6 +5,7 @@ import AppFlashSale from "./components/AppFlashSale/AppFlashSale.jsx";
 import AppAdditionalBanners from "./components/AppAdditionalBanners/AppAdditionalBanners.jsx";
 import AppShopeeMall from "./components/AppShopeeMall/AppShopeeMall.jsx";
 import AppTopSearching from "./components/AppTopSearching/AppTopSearching.jsx";
+import AppTodaySuggestion from "./components/AppTodaySuggestion/AppTodaySuggestion.jsx";
 import { Affix } from "antd";
 import "./App.css";
 
@@ -20,6 +21,7 @@ const App = () => {
       <AppAdditionalBanners />
       <AppShopeeMall />
       <AppTopSearching />
+      <AppTodaySuggestion />
     </>
   );
 };
