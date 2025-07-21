@@ -15,8 +15,10 @@ const productsSlice = createSlice({
                 detail: {
                     availabilityStatus: item.availabilityStatus ("In Stock"), 
                     brand: item.brand (""),
+                    category: item.category (""),
                     description: item.description (""),
                     dimensions: item.dimensions ({width: 3, height: 4, depth: 2}),
+                    discountPercentage: item.discountPercentage ("3.33"),
                     rating: item.rating (4.2),
                     returnPolicy: item.returnPolicy (""),
                     shippingInformation: item.shippingInformation (""),
@@ -43,12 +45,14 @@ const productsSlice = createSlice({
           id: item.id,
           name: item.title,
           price: item.price,
-          image: item.thumbnail,
+          image: item.images[0],
           detail: {
             availabilityStatus: item.availabilityStatus,
             brand: item.brand,
+            category: item.category,
             description: item.description,
             dimensions: item.dimensions,
+            discountPercentage: item.discountPercentage,
             rating: item.rating,
             returnPolicy: item.returnPolicy,
             shippingInformation: item.shippingInformation,
@@ -69,7 +73,12 @@ const productsSlice = createSlice({
 
 const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
   try {
-    const response = await axios.get("https://dummyjson.com/products?limit=50");
+    const response = await axios.get("https://dummyjson.com/products?limit=60");
+
+    // console.log(
+    //   "In productsSlice.jsx, response.data.products[0]: ",
+    //   response.data.products[0]
+    // );
     return response.data.products;
   } catch (err) {
     ((state) => (state.error = err))();

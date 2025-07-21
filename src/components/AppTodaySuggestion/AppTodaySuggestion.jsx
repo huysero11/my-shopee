@@ -1,12 +1,14 @@
 import "./AppTodaySuggestion.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { Col, Row } from "antd";
 import { fetchProducts } from "../../slices/productsSlice.jsx";
 import {
   productListSelector,
   productListStatusSelector,
   productListErrorSelector,
 } from "../../redux/selectors.jsx";
+import ProductCard from "../../components/ProductCard/ProductCard.jsx";
 
 const AppTodaySuggestion = () => {
   const status = useSelector(productListStatusSelector);
@@ -20,11 +22,24 @@ const AppTodaySuggestion = () => {
     }
   }, []);
 
-  console.log("in AppTodaySuggestion.jsx, productList: ", productList);
+  // console.log("in AppTodaySuggestion.jsx, productList: ", productList);
 
   return (
     <>
-      <div className="app-today-suggestion-container"></div>
+      <div className="app-today-suggestion-container">
+        <div className="app-today-suggestion-header">GỢI Ý HÔM NAY</div>
+        <div className="app-today-suggestion-body">
+          <Row gutter={[0, 0]}>
+            {productList.map((product_info, index) => {
+              return (
+                <Col key={index} span={4}>
+                  <ProductCard info={product_info} />
+                </Col>
+              );
+            })}
+          </Row>
+        </div>
+      </div>
       <div
         className="box"
         style={{

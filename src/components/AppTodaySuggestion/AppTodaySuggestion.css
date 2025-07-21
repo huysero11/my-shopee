@@ -1,0 +1,22 @@
+.app-today-suggestion-header {
+  height: 60px;
+  background-color: white;
+  color: rgb(238, 77, 45);
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 19.2px;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 4px solid rgb(238, 77, 45);
+  position: sticky;
+  top: 120px;
+  z-index: 1000;
+}
+
+.app-today-suggestion-body {
+  padding-top: 5px;
+  margin: 0 30px;
+}
