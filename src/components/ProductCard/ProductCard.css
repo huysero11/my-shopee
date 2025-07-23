@@ -5,6 +5,7 @@
   /* background-color: rgb(226, 169, 157); */
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .product-card-inside-wrapper {
@@ -41,6 +42,11 @@
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   line-height: 20px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
   /* background-color: rgb(174, 240, 174); */
 }
 

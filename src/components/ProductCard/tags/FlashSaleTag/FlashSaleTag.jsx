@@ -10,7 +10,7 @@ const FlashSaleTag = () => {
             height: "20px",
             width: "20px",
             color: "rgba(255, 255, 255, 1)",
-            backgroundColor: "rgba(244, 91, 57, 1)",
+            backgroundColor: "rgba(250, 55, 12, 1)",
             justifyContent: "center",
           }}
         />

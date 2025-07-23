@@ -32,7 +32,7 @@ const ProductCard = (props) => {
         <div className="product-card-content-wrapper">
           <div className="product-card-name">
             <TextTag text={text_tag_name[randomInt(0, 2)]} />
-            {product.name}
+            {product.name} Lorem ipsum dolor sit amet
           </div>
           <div className="product-card-tags">
             {/* <ReVoDichTag /> */}
