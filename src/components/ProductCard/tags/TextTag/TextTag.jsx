@@ -4,9 +4,12 @@ const favouriteStyle = {
   display: "inline-block",
   fontSize: "12px",
   fontWeight: "500",
-  padding: "0 4px",
+  padding: "2px 4px",
   margin: "0 2px 2px 0",
   borderRadius: "2px",
+  width: "object-fit",
+  // height: "14px",
+  lineHeight: "10px",
 };
 
 const mallStyle = {

@@ -7,6 +7,12 @@
   flex-direction: column;
 }
 
+.product-card-inside-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 0.667px solid rgb(223, 223, 223);
+}
+
 .product-card-image-wrapper {
   background-color: rgb(255, 255, 255);
   height: 63.31%;
@@ -30,6 +36,7 @@
 
 .product-card-name {
   min-height: 40px;
+  /* max-height: 44px; */
   margin-bottom: 4px;
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
@@ -40,7 +47,10 @@
 .product-card-tags {
   min-height: 20px;
   margin-bottom: 8px;
-  background-color: rgb(228, 29, 29);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* background-color: rgb(228, 29, 29); */
 }
 
 .product-card-price {
