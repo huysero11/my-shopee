@@ -1,4 +1,4 @@
-const UnderTextDiscountTag = () => {
+const UnderTextDiscountTag = (props) => {
   return (
     <div
       className="under-text-discount-tag-container"
@@ -14,6 +14,7 @@ const UnderTextDiscountTag = () => {
         lineHeight: "10px",
         // borderRadius: "2px",
         position: "relative",
+        whiteSpace: "pre",
       }}
     >
       {[1, 2, 3, 4].map((item) => (
@@ -44,7 +45,9 @@ const UnderTextDiscountTag = () => {
           }}
         ></div>
       ))}
-      Giảm <sup>đ</sup>5k
+      {`Giảm `}
+      <sup>đ</sup>
+      {`${props.amount}k`}
     </div>
   );
 };

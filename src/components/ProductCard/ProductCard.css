@@ -28,6 +28,13 @@
   object-fit: contain;
 }
 
+.product-card-image-wrapper .tags-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
 .product-card-content-wrapper {
   background-color: rgb(255, 255, 255);
   flex-grow: 1;
@@ -50,7 +57,7 @@
   /* background-color: rgb(174, 240, 174); */
 }
 
-.product-card-tags {
+.product-card-tags-wrapper {
   min-height: 20px;
   margin-bottom: 8px;
   display: flex;

@@ -6,6 +6,7 @@ import TextTag from "../../components/ProductCard/tags/TextTag/TextTag.jsx";
 import FlashSaleTag from "../../components/ProductCard/tags/FlashSaleTag/FlashSaleTag";
 import ReVoDichTag from "../../components/ProductCard/tags/ReVoDichTag/ReVoDichTag.jsx";
 import UnderTextDiscountTag from "../../components/ProductCard/tags/UnderTextDiscountTag/UnderTextDiscountTag.jsx";
+import DateTag from "../../components/ProductCard/tags/DateTag/DateTag.jsx";
 
 const round3digit = (n) => {
   return n.toFixed(3);
@@ -15,7 +16,7 @@ function randomInt(L, R) {
   return Math.floor(Math.random() * (R - L + 1) + L);
 }
 
-const text_tag_name = ["Mall", "Yêu thích", "Yêu thích+"];
+const text_tag_name = ["", "Mall", "Yêu thích", "Yêu thích+"];
 
 const ProductCard = (props) => {
   const product = props.info;
@@ -26,18 +27,30 @@ const ProductCard = (props) => {
         <div className="product-card-image-wrapper">
           <img src={new URL(`${product.image}`, import.meta.url).href} />
           <DiscountTag percentage={product.detail.discountPercentage} />
-          <VoucherExtraTag />
-          <SieuReTag />
+          <div className="tags-wrapper">
+            {randomInt(0, 1) === 1 ? <DateTag /> : <></>}
+            {randomInt(0, 1) === 1 ? <VoucherExtraTag /> : <></>}
+            {randomInt(0, 1) === 1 ? <SieuReTag /> : <></>}
+          </div>
         </div>
         <div className="product-card-content-wrapper">
           <div className="product-card-name">
-            <TextTag text={text_tag_name[randomInt(0, 2)]} />
+            <TextTag text={text_tag_name[randomInt(0, 3)]} />
             {product.name} Lorem ipsum dolor sit amet
           </div>
-          <div className="product-card-tags">
-            {/* <ReVoDichTag /> */}
-            <UnderTextDiscountTag />
-            <FlashSaleTag />
+          <div className="product-card-tags-wrapper">
+            {randomInt(0, 1) === 1 ? (
+              <FlashSaleTag />
+            ) : (
+              [
+                randomInt(0, 1) === 1 ? (
+                  <UnderTextDiscountTag amount={randomInt(5, 30)} />
+                ) : (
+                  <></>
+                ),
+                randomInt(0, 1) === 1 ? <ReVoDichTag /> : <></>,
+              ]
+            )}
           </div>
           <div className="product-card-price">
             <sup>đ</sup>

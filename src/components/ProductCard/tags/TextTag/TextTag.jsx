@@ -20,6 +20,10 @@ const mallStyle = {
 const TextTag = (props) => {
   const text = props.text;
 
+  if (text == "") {
+    return <></>;
+  }
+
   return <div style={text == "Mall" ? mallStyle : favouriteStyle}>{text}</div>;
 };
 
