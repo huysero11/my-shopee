@@ -16,6 +16,7 @@
 
 .product-card-inside-wrapper:hover {
   border-color: rgb(238, 77, 45);
+  cursor: pointer;
 }
 
 .product-card-image-wrapper {

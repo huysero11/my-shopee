@@ -1,12 +1,14 @@
-import "./ProductCard.css";
+import { useNavigate } from "react-router-dom";
+import DateTag from "../../components/ProductCard/tags/DateTag/DateTag.jsx";
 import DiscountTag from "../../components/ProductCard/tags/DiscountTag/DiscountTag.jsx";
-import VoucherExtraTag from "../../components/ProductCard/tags/VoucherExtraTag/VoucherExtraTag.jsx";
-import SieuReTag from "../../components/ProductCard/tags/SieuReTag/SieuReTag.jsx";
-import TextTag from "../../components/ProductCard/tags/TextTag/TextTag.jsx";
 import FlashSaleTag from "../../components/ProductCard/tags/FlashSaleTag/FlashSaleTag";
 import ReVoDichTag from "../../components/ProductCard/tags/ReVoDichTag/ReVoDichTag.jsx";
+import SieuReTag from "../../components/ProductCard/tags/SieuReTag/SieuReTag.jsx";
+import TextTag from "../../components/ProductCard/tags/TextTag/TextTag.jsx";
 import UnderTextDiscountTag from "../../components/ProductCard/tags/UnderTextDiscountTag/UnderTextDiscountTag.jsx";
-import DateTag from "../../components/ProductCard/tags/DateTag/DateTag.jsx";
+import VoucherExtraTag from "../../components/ProductCard/tags/VoucherExtraTag/VoucherExtraTag.jsx";
+
+import "./ProductCard.css";
 
 const round3digit = (n) => {
   return n.toFixed(3);
@@ -20,10 +22,18 @@ const text_tag_name = ["", "Mall", "Yêu thích", "Yêu thích+"];
 
 const ProductCard = (props) => {
   const product = props.info;
+  const navigate = useNavigate();
+
+  const handleProductCardClicked = () => {
+    navigate(`/product-detail/${props.info.id}`);
+  };
   // console.log("In ProductCard.jsx, product: ", product);
   return (
     <div className="product-card-container">
-      <div className="product-card-inside-wrapper">
+      <div
+        className="product-card-inside-wrapper"
+        onClick={handleProductCardClicked}
+      >
         <div className="product-card-image-wrapper">
           <img src={new URL(`${product.image}`, import.meta.url).href} />
           <DiscountTag percentage={product.detail.discountPercentage} />

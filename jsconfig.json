@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // Treat `/src` as the root of imports:
+    "baseUrl": "src",
+
+    // (Optional) Define any aliases you want:
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"]
+    }
+  },
+  // Only look under src/ for your modules:
+  "include": ["src"]
+}
