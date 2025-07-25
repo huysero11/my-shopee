@@ -21,10 +21,17 @@ import {
   Input,
   Space,
 } from "antd";
+import { useNavigate } from "react-router-dom";
 import Logo from "../../images/shopee_logo.png";
 import "./AppHeader.css";
 
 const AppHeader = () => {
+  const navigate = useNavigate();
+
+  const handleLogoClicked = () => {
+    navigate(`/`);
+  };
+
   return (
     <>
       <Affix offsetTop={0} style={{ zIndex: 1000 }}>
@@ -113,6 +120,7 @@ const AppHeader = () => {
             <Flex
               className="logo-container"
               style={{ width: "20%", height: "100%" }}
+              onClick={handleLogoClicked}
             >
               <Image
                 src={Logo}
