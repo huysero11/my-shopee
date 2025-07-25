@@ -1,7 +1,7 @@
 import "./AppTodaySuggestion.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { Col, Row } from "antd";
+import { Col, Row, Spin } from "antd";
 import { fetchProducts } from "../../slices/productsSlice.jsx";
 import {
   productListSelector,
@@ -23,6 +23,23 @@ const AppTodaySuggestion = () => {
   }, []);
 
   // console.log("in AppTodaySuggestion.jsx, productList: ", productList);
+
+  if (status === "loading") {
+    return (
+      <div
+        className="box"
+        style={{
+          height: "400px",
+          backgroundColor: "white",
+          margin: "20px 30px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Spin size="large" style={{ marginTop: "50px" }} />
+      </div>
+    );
+  }
 
   return (
     <>
