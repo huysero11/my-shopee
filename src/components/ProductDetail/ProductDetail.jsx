@@ -1,4 +1,4 @@
-import { Breadcrumb, Carousel, Col, Row, Space } from "antd";
+import { Breadcrumb, Carousel, Col, Row, Space, Rate, Tooltip } from "antd";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { productListSelector } from "../../redux/selectors";
@@ -9,6 +9,7 @@ import {
   FaTwitter,
   FaHeart,
 } from "react-icons/fa";
+import { QuestionCircleOutlined, CheckCircleOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import "./ProductDetail.css";
 
@@ -18,6 +19,10 @@ const ProductDetail = () => {
   const product = productList.find((item) => item.id === Number(id));
 
   const [like, setLike] = useState(0);
+  const getOriginalPrice = (discountedPrice, discountPercentage) => {
+    const res = (discountedPrice * 100) / (100 - discountPercentage);
+    return res.toFixed(3);
+  };
 
   // console.log("in productDetail.jsx, product: ", product);
 
@@ -107,7 +112,78 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="product-detail-name-wrapper">
+            {product.name} Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quas sint rerum id maiores nam hic necessitatibus
+          </div>
+          <div className="product-detail-rating-wrapper">
+            <div className="product-detail-rating-wrapper-left">
+              <div className="product-detail-rating-item stars-wrapper">
+                <span className="product-detail-rating-item-number">
+                  {product.detail.rating}
+                </span>
+                <Rate disabled defaultValue={product.detail.rating} allowHalf />
+              </div>
+              <div className="product-detail-rating-item reviews-wrapper">
+                <span className="product-detail-rating-item-number">
+                  {product.reviews.length}
+                </span>
+                <span className="product-detail-right-text">Đánh giá</span>
+              </div>
+              <div className="product-detail-rating-item sale-figures-wrapper">
+                <Space size={4}>
+                  <span className="product-detail-right-text">Đã bán</span>
+                  {product.reviews.length}
+                  <Tooltip
+                    placement="bottom"
+                    title={
+                      <span
+                        style={{ color: "black" }}
+                      >{`Đã bán ${product.reviews.length} tại Việt Nam`}</span>
+                    }
+                    color="rgba(243, 243, 243, 1)"
+                  >
+                    <QuestionCircleOutlined className="product-detail-right-text" />
+                  </Tooltip>
+                </Space>
+              </div>
+            </div>
+            <div className="product-detail-rating-wrapper-right">
+              <span className="product-detail-right-text">Tố cáo</span>
+            </div>
+          </div>
+          <div className="product-detail-price-wrapper">
+            <div className="product-detail-discounted-price">
+              <sup style={{ textDecoration: "underline", marginRight: "4px" }}>
+                đ
+              </sup>
+              {product.price}
+              <CheckCircleOutlined
+                style={{ fontSize: "15px", margin: "0 15px 0 5px" }}
+              />
+            </div>
+            <div className="product-detail-original-price">
+              <sup>đ</sup>
+              {getOriginalPrice(
+                product.price,
+                product.detail.discountPercentage
+              )}
+            </div>
+          </div>
+
+          <div className="product-detail-classifier-wrapper">
+            <div className="product-detail-transport-wrapper">
+              {product.detail.shippingInformation}
+            </div>
+            <div className="product-detail-category-wrapper">
+              <div className="product-detail-type-wrapper"></div>
+              <div className="product-detail-size-wrapper"></div>
+              <div className="product-detail-quantity-wrapper"></div>
+            </div>
+          </div>
+          <div className="product-detail-buttons"></div>
+        </div>
       </div>
 
       <div
