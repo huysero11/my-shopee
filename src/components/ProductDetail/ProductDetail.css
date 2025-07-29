@@ -1,0 +1,95 @@
+.product-detail-breadcrumb {
+  margin: 20px 30px;
+}
+
+/*  */
+
+/* last crumb (active page) in a different color */
+.product-detail-breadcrumb .ant-breadcrumb-link {
+  font-size: 14px;
+}
+
+.product-detail-main {
+  display: flex;
+  margin: 0 30px;
+  height: 630px;
+  background-color: white;
+}
+
+.product-detail-main .left {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 15px;
+  /* background-color: bisque; */
+}
+
+.product-detail-main .left .image-wrapper {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+}
+
+.product-detail-main .left .image-wrapper > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-detail-main .left .product-detail-carousel-wrapper {
+  height: 92px;
+  margin: 5px 0;
+  /* background-color: rgb(223, 223, 223); */
+}
+
+.product-detail-carousel-wrapper .slick-list,
+.product-detail-carousel-wrapper .slick-track,
+.product-detail-carousel-wrapper .slick-slide,
+.product-detail-carousel-wrapper .slick-slide > div,
+.product-detail-carousel-wrapper .slick-slide > div > div {
+  height: 92px !important;
+}
+
+.product-detail-carousel-wrapper .ant-carousel .slick-slider .slick-arrow {
+  background-color: rgb(241, 128, 76);
+  border-radius: 50%;
+}
+
+.product-detail-share {
+  height: 25px;
+  margin-top: 15px;
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.product-detail-share-left {
+  display: flex;
+  width: 55%;
+  align-items: center;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(197, 197, 197);
+  /* background-color: rgb(209, 173, 216); */
+}
+
+.product-detail-share-icons {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.product-detail-share-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 16px;
+  /* background-color: greenyellow; */
+}
+
+.product-detail-main .right {
+  flex-grow: 1;
+  background-origin: border-box;
+  padding: 15px;
+  background-color: rgb(95, 95, 227);
+}
