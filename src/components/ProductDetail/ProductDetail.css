@@ -66,7 +66,7 @@
 
 .product-detail-carousel-wrapper .ant-carousel .slick-slider .slick-arrow {
   background-color: rgb(241, 128, 76);
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .product-detail-share {
@@ -103,7 +103,7 @@
 /* ------------------------------------------------------------- */
 
 .product-detail-main .right {
-  flex-grow: 1;
+  width: 60%;
   background-origin: border-box;
   padding: 20px 35px 0 20px;
   /* background-color: rgb(172, 201, 225); */
@@ -188,45 +188,166 @@
   box-sizing: border-box;
   padding: 0 20px;
   min-height: 289px;
-  background-color: rgb(255, 189, 165);
+  /* background-color: rgb(255, 189, 165); */
+}
+
+.product-detail-classifier-text {
+  display: inline;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(117, 117, 117);
+  width: 100px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 .product-detail-transport-wrapper {
-  min-height: 77px;
+  height: 77px;
   margin: -4px 0 25px -4px;
   padding: 4px;
   box-sizing: border-box;
-  background-color: rgb(174, 209, 174);
+  display: flex;
+  /* background-color: rgb(174, 209, 174); */
+}
+
+.product-detail-transport-icon {
+  font-size: 16px;
+  height: 20px;
+  margin-right: 8px;
+  color: rgba(0, 163, 155, 1);
+}
+
+.product-detail-transport-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  height: 100%;
 }
 
 .product-detail-category-wrapper {
-  min-height: 195px;
+  height: 195px;
   box-sizing: border-box;
   padding: 4px 4px 15px 4px;
   margin: -4px 0 0 -4px;
-  background-color: rgb(197, 122, 235);
+  /* background-color: rgb(197, 122, 235); */
 }
 
 .product-detail-type-wrapper {
-  min-height: 40px;
+  display: flex;
+  align-items: center;
+  height: 40px;
   margin-bottom: 24px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+}
+
+.product-detail-type-right {
+  display: flex;
+  gap: 5px;
+}
+
+.product-detail-type-right-item {
+  height: 40px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.product-detail-type-right-item:hover {
+  border-color: rgb(255, 47, 0);
+  color: rgb(255, 47, 0);
+}
+
+.product-detail-type-right-item-image-wrapper {
+  background-color: white;
+  width: 24px;
+  height: 24px;
+}
+
+.product-detail-type-right-item-image-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .product-detail-size-wrapper {
-  min-height: 40px;
+  display: flex;
+  align-items: center;
+  height: 40px;
   margin-bottom: 40px;
-  background-color: rgb(251, 255, 127);
+  /* background-color: rgb(251, 255, 127); */
+}
+
+.product-detail-size-right {
+  display: flex;
+  gap: 5px;
+}
+
+.product-detail-size-right-item {
+  width: 70px;
+  height: 40px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.product-detail-size-right-item:hover {
+  border-color: rgb(255, 47, 0);
+  color: rgb(255, 47, 0);
 }
 
 .product-detail-quantity-wrapper {
-  min-height: 32px;
+  display: flex;
+  align-items: center;
+  height: 32px;
   /* margin-top: 16px; */
-  background-color: rgb(127, 159, 255);
+  /* background-color: rgb(127, 159, 255); */
 }
 
-.product-detail-buttons {
+.product-detail-quantity-button {
+  cursor: default;
+  width: 50px;
+}
+
+.product-detail-buttons-wrapper {
+  display: flex;
+  gap: 15px;
   margin: 15px 0 30px 0;
-  min-height: 48px;
-  background-color: darkgoldenrod;
+  height: 48px;
+  padding: 0 0 0 20px;
+  /* background-color: darkgoldenrod; */
+}
+
+.product-detail-buttons-add-to-cart {
+  height: 100%;
+  border-radius: 2px;
+  color: rgb(255, 72, 0);
+  border: 0.5px solid rgb(255, 72, 0);
+  background-color: rgb(253, 226, 226);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.product-detail-buttons-buy {
+  padding: 0 20px;
+  font-size: 14px;
+  background-color: rgb(238, 77, 45);
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+.product-detail-buttons-add-to-cart:hover,
+.product-detail-buttons-buy:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }

@@ -1,4 +1,13 @@
-import { Breadcrumb, Carousel, Col, Row, Space, Rate, Tooltip } from "antd";
+import {
+  Breadcrumb,
+  Carousel,
+  Col,
+  Row,
+  Space,
+  Rate,
+  Tooltip,
+  Button,
+} from "antd";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { productListSelector } from "../../redux/selectors";
@@ -9,7 +18,14 @@ import {
   FaTwitter,
   FaHeart,
 } from "react-icons/fa";
-import { QuestionCircleOutlined, CheckCircleOutlined } from "@ant-design/icons";
+import {
+  QuestionCircleOutlined,
+  CheckCircleOutlined,
+  TruckOutlined,
+  MinusOutlined,
+  PlusOutlined,
+  ShoppingCartOutlined,
+} from "@ant-design/icons";
 import { useState } from "react";
 import "./ProductDetail.css";
 
@@ -19,10 +35,13 @@ const ProductDetail = () => {
   const product = productList.find((item) => item.id === Number(id));
 
   const [like, setLike] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const getOriginalPrice = (discountedPrice, discountPercentage) => {
     const res = (discountedPrice * 100) / (100 - discountPercentage);
     return res.toFixed(3);
   };
+
+  const sizes = ["", "S", "M", "L", "XL", "XXL"];
 
   // console.log("in productDetail.jsx, product: ", product);
 
@@ -174,26 +193,108 @@ const ProductDetail = () => {
 
           <div className="product-detail-classifier-wrapper">
             <div className="product-detail-transport-wrapper">
-              {product.detail.shippingInformation}
+              <div className="product-detail-classifier-text">Vận chuyển</div>
+              <div>
+                <TruckOutlined className="product-detail-transport-icon" />
+              </div>
+
+              <div className="product-detail-transport-right">
+                <div>
+                  <div>{product.detail.shippingInformation}</div>
+                </div>
+                <div>
+                  Phí ship 0
+                  <sup
+                    style={{ textDecoration: "underline", marginRight: "4px" }}
+                  >
+                    đ
+                  </sup>
+                </div>
+                <div style={{ fontSize: "12px", color: "rgb(117, 117, 117)" }}>
+                  Tặng Voucher{" "}
+                  <sup
+                    style={{ textDecoration: "underline", margin: "0 0 0 4px" }}
+                  >
+                    đ
+                  </sup>
+                  15.000 nếu đơn hàng giao sau thời gian trên{" "}
+                </div>
+              </div>
             </div>
             <div className="product-detail-category-wrapper">
-              <div className="product-detail-type-wrapper"></div>
-              <div className="product-detail-size-wrapper"></div>
-              <div className="product-detail-quantity-wrapper"></div>
+              <div className="product-detail-type-wrapper">
+                <div className="product-detail-classifier-text">Thể loại</div>
+                <div className="product-detail-type-right">
+                  {[1, 2, 3].map((item) => (
+                    <div className="product-detail-type-right-item">
+                      <div className="product-detail-type-right-item-image-wrapper">
+                        <img src={product.image} />
+                      </div>
+
+                      {`Loại ${item}`}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="product-detail-size-wrapper">
+                <div className="product-detail-classifier-text">Kích thước</div>
+                <div className="product-detail-size-right">
+                  {[1, 2, 3, 4, 5].map((item) => (
+                    <div className="product-detail-size-right-item">
+                      {sizes[item]}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="product-detail-quantity-wrapper">
+                <div className="product-detail-classifier-text">Số lượng</div>
+                <Space.Compact style={{ marginRight: "15px" }}>
+                  <Button
+                    icon={<MinusOutlined />}
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                  />
+                  <Button className="product-detail-quantity-button">
+                    {quantity}
+                  </Button>
+                  <Button
+                    icon={<PlusOutlined />}
+                    onClick={() => setQuantity(quantity + 1)}
+                  />
+                </Space.Compact>
+                <div className="product-detail-classifier-text">CÒN HÀNG</div>
+              </div>
             </div>
           </div>
-          <div className="product-detail-buttons"></div>
+          <div className="product-detail-buttons-wrapper">
+            <button className="product-detail-buttons-add-to-cart">
+              <ShoppingCartOutlined
+                style={{ fontSize: "25px", marginRight: "5px" }}
+              />
+              Thêm Vào Giỏ Hàng
+            </button>
+            <button className="product-detail-buttons-buy">
+              <div>Mua Với Voucher</div>
+              <div style={{ fontSize: "18px" }}>
+                <sup
+                  style={{ textDecoration: "underline", marginRight: "4px" }}
+                >
+                  đ
+                </sup>
+                {product.price}
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div
+      {/* <div
         className="box"
         style={{
           height: "400px",
           backgroundColor: "white",
           margin: "20px 30px",
         }}
-      ></div>
+      ></div> */}
     </>
   );
 };
