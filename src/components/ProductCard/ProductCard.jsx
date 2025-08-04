@@ -25,7 +25,7 @@ const ProductCard = (props) => {
   const handleProductCardClicked = () => {
     navigate(`/product-detail/${props.info.id}`);
   };
-  console.log("In ProductCard.jsx, product: ", product);
+  // console.log("In ProductCard.jsx, product: ", product.detail.brand);
   return (
     <div className="product-card-container">
       <div

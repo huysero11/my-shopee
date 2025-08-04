@@ -24,7 +24,11 @@ const TextTag = (props) => {
     return <></>;
   }
 
-  return <div style={text == "Mall" ? mallStyle : favouriteStyle}>{text}</div>;
+  return (
+    <div style={text.indexOf("Mall") != -1 ? mallStyle : favouriteStyle}>
+      {text}
+    </div>
+  );
 };
 
 export default TextTag;
