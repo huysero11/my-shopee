@@ -43,7 +43,7 @@ const ProductDetail = () => {
 
   const sizes = ["", "S", "M", "L", "XL", "XXL"];
 
-  // console.log("in productDetail.jsx, product: ", product);
+  console.log("in productDetail.jsx, product: ", product);
 
   return (
     <>
@@ -287,14 +287,14 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      {/* <div
+      <div
         className="box"
         style={{
           height: "400px",
           backgroundColor: "white",
           margin: "20px 30px",
         }}
-      ></div> */}
+      ></div>
     </>
   );
 };

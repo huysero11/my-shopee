@@ -18,8 +18,6 @@ function randomInt(L, R) {
   return Math.floor(Math.random() * (R - L + 1) + L);
 }
 
-const text_tag_name = ["", "Mall", "Yêu thích", "Yêu thích+"];
-
 const ProductCard = (props) => {
   const product = props.info;
   const navigate = useNavigate();
@@ -27,7 +25,7 @@ const ProductCard = (props) => {
   const handleProductCardClicked = () => {
     navigate(`/product-detail/${props.info.id}`);
   };
-  // console.log("In ProductCard.jsx, product: ", product);
+  console.log("In ProductCard.jsx, product: ", product);
   return (
     <div className="product-card-container">
       <div
@@ -45,7 +43,7 @@ const ProductCard = (props) => {
         </div>
         <div className="product-card-content-wrapper">
           <div className="product-card-name">
-            <TextTag text={text_tag_name[randomInt(0, 3)]} />
+            <TextTag text={product.textTag} />
             {product.name} Lorem ipsum dolor sit amet
           </div>
           <div className="product-card-tags-wrapper">

@@ -1,6 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const text_tag_name = ["", "Mall", "Yêu thích", "Yêu thích+"];
+
+function randomInt(L, R) {
+  return Math.floor(Math.random() * (R - L + 1) + L);
+}
+
 const productsSlice = createSlice({
   name: "products",
   initialState: {
@@ -12,6 +18,7 @@ const productsSlice = createSlice({
                 name: item.title,
                 price: item.price,
                 image: item.thumbnail,
+                textTag: text_tag_name[randomInt(0, 3)], // add manually
                 detail: {
                     availabilityStatus: item.availabilityStatus ("In Stock"), 
                     brand: item.brand (""),
@@ -46,6 +53,7 @@ const productsSlice = createSlice({
           name: item.title,
           price: item.price,
           image: item.images[0],
+          textTag: text_tag_name[randomInt(0, 3)],
           detail: {
             availabilityStatus: item.availabilityStatus,
             brand: item.brand,
