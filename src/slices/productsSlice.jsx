@@ -56,7 +56,7 @@ const productsSlice = createSlice({
           textTag: text_tag_name[randomInt(0, 3)],
           detail: {
             availabilityStatus: item.availabilityStatus,
-            brand: item.brand,
+            brand: item.brand != undefined ? item.brand : "random brand",
             category: item.category,
             description: item.description,
             dimensions: item.dimensions,

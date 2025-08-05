@@ -4,6 +4,7 @@ import { productListSelector } from "../../redux/selectors";
 
 import ProductSeller from "../ProductSeller/ProductSeller.jsx";
 import ProductDetailMain from "../ProductDetailMain/ProductDetailMain.jsx";
+import ProductDesription from "../ProductDescription/ProductDesription.jsx";
 import "./ProductDetail.css";
 
 const ProductDetail = () => {
@@ -15,15 +16,16 @@ const ProductDetail = () => {
     <>
       <ProductDetailMain product={product} />
       <ProductSeller product={product} />
+      <ProductDesription product={product} />
 
-      {/* <div
+      <div
         className="box"
         style={{
           height: "400px",
           backgroundColor: "white",
           margin: "20px 30px",
         }}
-      ></div> */}
+      ></div>
     </>
   );
 };
