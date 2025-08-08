@@ -1,0 +1,27 @@
+.my-pagination-container {
+  display: flex;
+  height: 30px;
+}
+
+.my-pagination-item,
+.my-pagination-arrow {
+  width: 40px;
+  height: 100%;
+  margin: 0 15px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.my-pagination-item.active {
+  color: white;
+  background-color: rgb(238, 77, 45);
+  border-radius: 2px;
+}
+
+.my-pagination-arrow {
+  font-size: 10px;
+}
