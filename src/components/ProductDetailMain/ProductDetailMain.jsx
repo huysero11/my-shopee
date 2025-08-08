@@ -24,6 +24,8 @@ import {
   ShoppingCartOutlined,
 } from "@ant-design/icons";
 import { useState } from "react";
+import cartSlice from "../../slices/cartSlice";
+import { useDispatch } from "react-redux";
 import "./ProductDetailMain.css";
 
 const ProductDetailMain = (props) => {
@@ -37,6 +39,20 @@ const ProductDetailMain = (props) => {
   };
 
   const sizes = ["", "S", "M", "L", "XL", "XXL"];
+
+  const dispatch = useDispatch();
+  const handleAddButtonClicked = () => {
+    dispatch(
+      cartSlice.actions.addToCart({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: quantity,
+        image: product.image,
+        checked: false,
+      })
+    );
+  };
 
   return (
     <>
@@ -259,7 +275,10 @@ const ProductDetailMain = (props) => {
             </div>
           </div>
           <div className="product-detail-buttons-wrapper">
-            <button className="product-detail-buttons-add-to-cart">
+            <button
+              className="product-detail-buttons-add-to-cart"
+              onClick={handleAddButtonClicked}
+            >
               <ShoppingCartOutlined
                 style={{ fontSize: "25px", marginRight: "5px" }}
               />

@@ -93,3 +93,17 @@
 .cart-icon-container:hover {
   cursor: pointer;
 }
+
+.cart-detail-header-lower-inside-right-search-bar-right-button {
+  height: 100%;
+  padding: 0 15px;
+  background-color: rgb(238, 77, 45);
+  border: none;
+  border-radius: 1px;
+}
+
+.cart-detail-header-lower-inside-right-search-bar-right-button-icon {
+  font-size: 14px;
+  margin: 0 18px;
+  color: white;
+}

@@ -32,7 +32,7 @@ const ProductRatings = (props) => {
   let [renderedReviews, setRenderedReviews] = useState([]);
 
   useEffect(() => {
-    console.log("Current Page: ", currentPage);
+    // console.log("Current Page: ", currentPage);
     const start = (currentPage - 1) * reviews_per_page;
     const end = currentPage * reviews_per_page;
     setRenderedReviews(reviews.slice(start, end));
@@ -54,9 +54,7 @@ const ProductRatings = (props) => {
     }
   };
 
-  console.log("reviews: ", reviews);
-
-  // console.log("Rendered Reviews:", renderedReviews);
+  // console.log("reviews: ", reviews);
 
   return (
     <div className="product-ratings-container">

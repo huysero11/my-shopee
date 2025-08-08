@@ -32,6 +32,10 @@ const AppHeader = () => {
     navigate(`/`);
   };
 
+  const handleCartIconClicked = () => {
+    navigate(`/cart`);
+  };
+
   return (
     <>
       <Affix offsetTop={0} style={{ zIndex: 1000 }}>
@@ -173,6 +177,7 @@ const AppHeader = () => {
                 paddingLeft: "50px",
               }}
               align="center"
+              onClick={handleCartIconClicked}
             >
               <Badge
                 count={5}
