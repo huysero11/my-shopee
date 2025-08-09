@@ -21,12 +21,15 @@ import {
   Input,
   Space,
 } from "antd";
+import { useSelector } from "react-redux";
+import { totalQuantitySelector } from "../../redux/selectors";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../images/shopee_logo.png";
 import "./AppHeader.css";
 
 const AppHeader = () => {
   const navigate = useNavigate();
+  const totalQuantity = useSelector(totalQuantitySelector);
 
   const handleLogoClicked = () => {
     navigate(`/`);
@@ -180,7 +183,7 @@ const AppHeader = () => {
               onClick={handleCartIconClicked}
             >
               <Badge
-                count={5}
+                count={totalQuantity}
                 size="small"
                 offset={[-2, 3]}
                 style={{

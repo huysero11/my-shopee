@@ -1,6 +1,7 @@
 import { Divider, Dropdown, Space } from "antd";
 import { FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
 import {
   BellOutlined,
   DownOutlined,
@@ -37,6 +38,12 @@ const nex_icon = [
 ];
 
 const CartDetailHeader = () => {
+  const navigate = useNavigate();
+
+  const handleLogoClicked = () => {
+    navigate("/");
+  };
+
   return (
     <div className="cart-detail-header-container">
       <div className="cart-detail-header-upper">
@@ -82,7 +89,10 @@ const CartDetailHeader = () => {
       <div className="cart-detail-header-lower">
         <div className="cart-detail-header-lower-inside">
           <div className="cart-detail-header-lower-inside-left">
-            <div className="cart-detail-header-lower-inside-left-image-wrapper">
+            <div
+              className="cart-detail-header-lower-inside-left-image-wrapper"
+              onClick={handleLogoClicked}
+            >
               <img
                 src={
                   new URL(`../../../images/shopee_logo_1.png`, import.meta.url)

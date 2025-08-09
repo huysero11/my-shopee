@@ -5,13 +5,14 @@ const cartSlice = createSlice({
   initialState: {
     cartItems: [
       // {
-      //     id: 0,
-      //     name: "",
-      //     price: 0,
-      //     quantity: 0,
-      //     image: "",
-      //     checked: false
-      // }
+      //   id: 0,
+      //   name: "",
+      //   price: 0,
+      //   quantity: 0,
+      //   image: "",
+      //   checked: false,
+      //   textTag: ""
+      // },
     ],
     totalQuantity: 0,
     totalPrice: 0,
@@ -19,7 +20,7 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const newProduct = action.payload;
-      //   console.log("Adding to cart:", newProduct);
+      console.log("In cartSlice, Adding to cart:", newProduct);
       const existingProduct = state.cartItems.find(
         (item) => item.id === newProduct.id
       );

@@ -30,6 +30,7 @@ import "./ProductDetailMain.css";
 
 const ProductDetailMain = (props) => {
   const product = props.product;
+  const setPoppedUpNoti = props.setPoppedUpNoti;
 
   const [like, setLike] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -42,6 +43,7 @@ const ProductDetailMain = (props) => {
 
   const dispatch = useDispatch();
   const handleAddButtonClicked = () => {
+    // console.log("in product detail main: ", product);
     dispatch(
       cartSlice.actions.addToCart({
         id: product.id,
@@ -50,8 +52,14 @@ const ProductDetailMain = (props) => {
         quantity: quantity,
         image: product.image,
         checked: false,
+        textTag: product.textTag,
       })
     );
+
+    setPoppedUpNoti(true);
+    setTimeout(() => {
+      setPoppedUpNoti(false);
+    }, 3000);
   };
 
   return (

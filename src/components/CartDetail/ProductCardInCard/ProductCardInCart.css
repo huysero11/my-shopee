@@ -1,0 +1,66 @@
+.product-card-in-card-container {
+  /* height: 256px; */
+  background-color: white;
+  margin: 0 0 12px 0;
+}
+
+.product-in-card-seller {
+  height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  box-sizing: border-box;
+  padding: 0 20px;
+  display: flex;
+}
+
+.product-in-card-seller-checkbox-wrapper {
+  width: 58px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-in-card-seller-checkbox-wrapper > input {
+  width: 16px;
+  height: 16px;
+}
+
+.product-in-card-seller-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.product-in-card-seller-chat-icon {
+  font-size: 20px;
+  color: rgb(255, 38, 0);
+}
+/* --------------------------------------------------------------- */
+
+.product-in-card-product-info {
+  height: 120px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px 20px 20px 20px;
+}
+
+.product-in-card-product-info-checkbox-wrapper {
+  width: 58px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-in-card-product-info-checkbox-wrapper > input {
+  width: 16px;
+  height: 16px;
+}
+
+/* --------------------------------------------------------------- */
+
+.product-in-card-shipping-voucher {
+  height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
