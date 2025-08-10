@@ -33,6 +33,27 @@ const cartSlice = createSlice({
 
       state.totalQuantity += newProduct.quantity;
     },
+    increaseQuantity: (state, action) => {
+      const id = action.payload;
+      const [product] = state.cartItems.filter((item) => item.id == id);
+      product.quantity++;
+
+      console.log(
+        "in cartSlice, increase product quantity, cartItems: ",
+        state.cartItems
+      );
+    },
+    decreaseQuantity: (state, action) => {
+      const id = action.payload;
+      const [product] = state.cartItems.filter((item) => item.id == id);
+      if (product.quantity > 1) {
+        product.quantity--;
+      }
+    },
+    deleteProduct: (state, action) => {
+      const id = action.payload;
+      state.cartItems = state.cartItems.filter((item) => item.id != id);
+    },
   },
 });
 

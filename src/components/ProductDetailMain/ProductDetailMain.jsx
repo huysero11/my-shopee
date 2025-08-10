@@ -49,6 +49,10 @@ const ProductDetailMain = (props) => {
         id: product.id,
         name: product.name,
         price: product.price,
+        originalPrice: getOriginalPrice(
+          product.price,
+          product.detail.discountPercentage
+        ),
         quantity: quantity,
         image: product.image,
         checked: false,

@@ -2,6 +2,7 @@
   /* height: 256px; */
   background-color: white;
   margin: 0 0 12px 0;
+  border-radius: 3px;
 }
 
 .product-in-card-seller {
@@ -58,9 +59,112 @@
   height: 16px;
 }
 
+.product-in-card-product-info-name-wrapper {
+  width: 506.32px;
+  height: 100%;
+  display: flex;
+  gap: 4px;
+}
+
+.product-in-card-product-info-name-image-wrapper {
+  height: 100%;
+  width: 80px;
+}
+
+.product-in-card-product-info-name-image-wrapper > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-color: rgb(245, 245, 245);
+}
+
+.product-in-card-product-info-name {
+  box-sizing: border-box;
+  padding: 5px 20px 0 10px;
+}
+
+.product-in-card-product-info-price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 168.77px;
+  font-size: 14px;
+}
+
+.product-in-card-product-info-price-original {
+  color: rgba(0, 0, 0, 0.54);
+  text-decoration-line: line-through;
+}
+
+.product-in-card-product-info-quantity-wrapper {
+  width: 173.74px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-in-card-product-info-price-to-pay-wrapper {
+  width: 114.18px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(238, 77, 45);
+}
+
+.product-in-card-product-info-options {
+  height: 100%;
+  width: 138.99px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-in-card-product-info-options-delete:hover {
+  color: rgb(238, 77, 45);
+  cursor: pointer;
+}
+
+.product-in-card-product-info-options-find-similar-wrapper {
+  display: flex;
+  width: 100%;
+  color: rgb(238, 77, 45);
+  cursor: pointer;
+}
+
+.product-in-card-product-info-options-find-similar {
+  width: max-content;
+  text-align: center;
+}
 /* --------------------------------------------------------------- */
 
 .product-in-card-shipping-voucher {
   height: 60px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  box-sizing: border-box;
+  padding: 20px 0 20px 40px;
+  display: flex;
+}
+
+.product-in-card-shipping-voucher-icon-wrapper {
+  /* width: 58px; */
+  height: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.product-in-card-shipping-voucher-icon {
+  font-size: 18px;
+  color: rgb(0, 152, 111);
+  margin-right: 15px;
+}
+
+.product-in-card-shipping-voucher-text {
+  color: rgb(0, 85, 170);
+  margin-left: 6px;
+  cursor: pointer;
 }
