@@ -47,50 +47,52 @@ const CartDetailHeader = () => {
   return (
     <div className="cart-detail-header-container">
       <div className="cart-detail-header-upper">
-        <div className="cart-detail-header-upper-left">
-          <div className="cart-detail-header-upper-text">Kênh người bán</div>
-          <Divider
-            type="vertical"
-            className="cart-detail-header-upper-divider"
-          />
-          <div className="cart-detail-header-upper-text">Tải ứng dụng</div>
-          <Divider
-            type="vertical"
-            className="cart-detail-header-upper-divider"
-          />
-          <div className="cart-detail-header-upper-text">Kết nối</div>
-          <div>
-            <FaFacebook className="cart-detail-header-upper-left-icon" />
-            <GrInstagram className="cart-detail-header-upper-left-icon" />
+        <div className="cart-detail-header-upper-content">
+          <div className="cart-detail-header-upper-left">
+            <div className="cart-detail-header-upper-text">Kênh người bán</div>
+            <Divider
+              type="vertical"
+              className="cart-detail-header-upper-divider"
+            />
+            <div className="cart-detail-header-upper-text">Tải ứng dụng</div>
+            <Divider
+              type="vertical"
+              className="cart-detail-header-upper-divider"
+            />
+            <div className="cart-detail-header-upper-text">Kết nối</div>
+            <div>
+              <FaFacebook className="cart-detail-header-upper-left-icon" />
+              <GrInstagram className="cart-detail-header-upper-left-icon" />
+            </div>
           </div>
-        </div>
-        <div className="cart-detail-header-upper-right">
-          <Space size={10}>
-            {[0, 1, 2, 3].map((item) => (
-              <div>
-                <Space size={4}>
-                  <div className="cart-detail-header-upper-right-icon">
-                    {pre_icon[item]}
-                  </div>
+          <div className="cart-detail-header-upper-right">
+            <Space size={10}>
+              {[0, 1, 2, 3].map((item) => (
+                <div>
+                  <Space size={4}>
+                    <div className="cart-detail-header-upper-right-icon">
+                      {pre_icon[item]}
+                    </div>
 
-                  <div className="cart-detail-header-upper-text">
-                    {upper_right_text[item]}
-                  </div>
+                    <div className="cart-detail-header-upper-text">
+                      {upper_right_text[item]}
+                    </div>
 
-                  <div className="cart-detail-header-upper-right-icon">
-                    {nex_icon[item]}
-                  </div>
-                </Space>
-              </div>
-            ))}
-          </Space>
+                    <div className="cart-detail-header-upper-right-icon">
+                      {nex_icon[item]}
+                    </div>
+                  </Space>
+                </div>
+              ))}
+            </Space>
+          </div>
         </div>
       </div>
       <div className="cart-detail-header-lower">
-        <div className="cart-detail-header-lower-inside">
-          <div className="cart-detail-header-lower-inside-left">
+        <div className="cart-detail-header-lower-content">
+          <div className="cart-detail-header-lower-content-left">
             <div
-              className="cart-detail-header-lower-inside-left-image-wrapper"
+              className="cart-detail-header-lower-content-left-image-wrapper"
               onClick={handleLogoClicked}
             >
               <img
@@ -102,21 +104,21 @@ const CartDetailHeader = () => {
             </div>
             <Divider
               type="vertical"
-              className="cart-detail-header-lower-inside-left-divider"
+              className="cart-detail-header-lower-content-left-divider"
             />
-            <div className="cart-detail-header-lower-inside-left-text">
+            <div className="cart-detail-header-lower-content-left-text">
               Giỏ Hàng
             </div>
           </div>
-          <div className="cart-detail-header-lower-inside-right">
-            <div className="cart-detail-header-lower-inside-right-search-bar">
-              <div className="cart-detail-header-lower-inside-right-search-bar-left">
+          <div className="cart-detail-header-lower-content-right">
+            <div className="cart-detail-header-lower-content-right-search-bar">
+              <div className="cart-detail-header-lower-content-right-search-bar-left">
                 <input placeholder="voucher thời trang 777.000Đ" />
               </div>
 
-              <div className="cart-detail-header-lower-inside-right-search-bar-right">
-                <button className="cart-detail-header-lower-inside-right-search-bar-right-button">
-                  <SearchOutlined className="cart-detail-header-lower-inside-right-search-bar-right-button-icon" />
+              <div className="cart-detail-header-lower-content-right-search-bar-right">
+                <button className="cart-detail-header-lower-content-right-search-bar-right-button">
+                  <SearchOutlined className="cart-detail-header-lower-content-right-search-bar-right-button-icon" />
                 </button>
               </div>
             </div>
