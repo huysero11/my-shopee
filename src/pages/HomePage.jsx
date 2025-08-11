@@ -6,6 +6,7 @@ import AppHeader from "../components/AppHeader/AppHeader.jsx";
 import AppShopeeMall from "../components/AppShopeeMall/AppShopeeMall.jsx";
 import AppTodaySuggestion from "../components/AppTodaySuggestion/AppTodaySuggestion.jsx";
 import AppTopSearching from "../components/AppTopSearching/AppTopSearching.jsx";
+import AppFooter from "../components/AppFooter/AppFooter.jsx";
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <AppShopeeMall />
       <AppTopSearching />
       <AppTodaySuggestion />
+      <AppFooter />
     </>
   );
 };

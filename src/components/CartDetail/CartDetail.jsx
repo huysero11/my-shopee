@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { cartItemsSelector } from "../../redux/selectors";
 import CartDetailHeader from "./CartDetailHeader/CartDetailHeader";
 import CartDetailBody from "./CartDetailBody/CartDetailBody";
+import AppFooter from "../../components/AppFooter/AppFooter";
 
 const CartDetail = () => {
   const cartItems = useSelector(cartItemsSelector);
@@ -11,6 +12,7 @@ const CartDetail = () => {
     <div className="cart-detail-container">
       <CartDetailHeader />
       <CartDetailBody cartItems={cartItems} />
+      <AppFooter />
     </div>
   );
 };

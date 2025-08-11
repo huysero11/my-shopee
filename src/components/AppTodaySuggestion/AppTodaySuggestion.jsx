@@ -57,14 +57,14 @@ const AppTodaySuggestion = () => {
           </Row>
         </div>
       </div>
-      <div
+      {/* <div
         className="box"
         style={{
           height: "400px",
           backgroundColor: "white",
           margin: "20px 30px",
         }}
-      ></div>
+      ></div> */}
     </>
   );
 };
