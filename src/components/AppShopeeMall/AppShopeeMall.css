@@ -92,6 +92,11 @@
   /* background-color: rgb(224, 167, 152); */
 }
 
+.lower-part-carousel .slick-arrow {
+  background-color: rgb(238, 77, 45);
+  border-radius: 50%;
+}
+
 .product-container .image-wrapper {
   height: 80%;
   width: 100%;

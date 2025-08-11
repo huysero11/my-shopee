@@ -53,6 +53,11 @@
   height: 250px;
 }
 
+.flashsale-carousel .slick-arrow {
+  background-color: rgb(238, 77, 45);
+  border-radius: 50%;
+}
+
 .product-container {
   display: flex;
   flex-direction: column;

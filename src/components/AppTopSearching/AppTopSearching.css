@@ -33,6 +33,11 @@
   /* background-color: lightcoral; */
 }
 
+.app-top-searching-container .lower-part .ant-carousel .slick-arrow {
+  background-color: rgb(238, 77, 45);
+  border-radius: 50%;
+}
+
 .app-top-searching-container .lower-part .product-container {
   display: flex;
   height: 265px;
