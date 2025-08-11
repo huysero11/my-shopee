@@ -16,6 +16,7 @@ const cartSlice = createSlice({
     ],
     totalQuantity: 0,
     totalPrice: 0,
+    allCheckboxTicked: false,
   },
   reducers: {
     addToCart: (state, action) => {
@@ -31,17 +32,20 @@ const cartSlice = createSlice({
         state.cartItems.push(newProduct);
       }
 
-      state.totalQuantity += newProduct.quantity;
+      state.totalQuantity++;
     },
     increaseQuantity: (state, action) => {
       const id = action.payload;
       const [product] = state.cartItems.filter((item) => item.id == id);
       product.quantity++;
 
-      console.log(
-        "in cartSlice, increase product quantity, cartItems: ",
-        state.cartItems
-      );
+      state.totalPrice = state.cartItems.reduce((sum, item) => {
+        return item.checked ? sum + item.price * item.quantity : sum;
+      }, 0);
+      // console.log(
+      //   "in cartSlice, increase product quantity, cartItems: ",
+      //   state.cartItems
+      // );
     },
     decreaseQuantity: (state, action) => {
       const id = action.payload;
@@ -49,10 +53,64 @@ const cartSlice = createSlice({
       if (product.quantity > 1) {
         product.quantity--;
       }
+
+      state.totalPrice = state.cartItems.reduce((sum, item) => {
+        return item.checked ? sum + item.price * item.quantity : sum;
+      }, 0);
     },
     deleteProduct: (state, action) => {
       const id = action.payload;
       state.cartItems = state.cartItems.filter((item) => item.id != id);
+
+      state.totalPrice = state.cartItems.reduce((sum, item) => {
+        return item.checked ? sum + item.price * item.quantity : sum;
+      }, 0);
+    },
+    tickCheckbox: (state, action) => {
+      const id = action.payload;
+      const [product] = state.cartItems.filter((item) => item.id == id);
+      product.checked = !product.checked;
+
+      state.totalPrice = state.cartItems.reduce((sum, item) => {
+        return item.checked ? sum + item.price * item.quantity : sum;
+      }, 0);
+
+      // -----------
+      const allSelected =
+        state.cartItems.length > 0 &&
+        state.cartItems.every((item) => item.checked === true);
+
+      state.allCheckboxTicked = allSelected;
+      // console.log(
+      //   "in cartSlice, when toggle a product, allCheckboxTicked = ",
+      //   state.allCheckboxTicked
+      // );
+    },
+    tickAllCheckbox: (state) => {
+      const allSelected =
+        state.cartItems.length > 0 &&
+        state.cartItems.every((item) => item.checked);
+
+      const newChecked = !allSelected;
+
+      state.cartItems.forEach((item) => {
+        item.checked = newChecked;
+      });
+
+      state.allCheckboxTicked = newChecked;
+
+      state.totalPrice = state.cartItems.reduce(
+        (sum, item) => (item.checked ? sum + item.price * item.quantity : sum),
+        0
+      );
+    },
+    buy: (state) => {
+      state.cartItems = state.cartItems.filter(
+        (item) => item.checked === false
+      );
+      state.totalQuantity = 0;
+      state.totalPrice = 0;
+      state.allCheckboxTicked = false;
     },
   },
 });

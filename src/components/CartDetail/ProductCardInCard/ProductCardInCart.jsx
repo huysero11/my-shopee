@@ -12,7 +12,7 @@ import {
 import "./ProductCardInCart.css";
 
 const ProductCardInCart = ({ product }) => {
-  console.log("in product card in cart: ", product);
+  // console.log("in product card in cart: ", product);
   // const menu_block_width = [58, 506.32, 173.74, 168.77, 114.18, 138.99];
 
   const dispatch = useDispatch();
@@ -29,11 +29,19 @@ const ProductCardInCart = ({ product }) => {
     dispatch(cartSlice.actions.deleteProduct(product.id));
   };
 
+  const handleCheckboxTicked = (id) => {
+    dispatch(cartSlice.actions.tickCheckbox(id));
+  };
+
   return (
     <div className="product-card-in-card-container">
       <div className="product-in-card-seller">
         <div className="product-in-card-seller-checkbox-wrapper">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onChange={() => handleCheckboxTicked(product.id)}
+            checked={product.checked}
+          />
         </div>
         <div className="product-in-card-seller-name-wrapper">
           <TextTag text={product.textTag} />
@@ -43,7 +51,11 @@ const ProductCardInCart = ({ product }) => {
       </div>
       <div className="product-in-card-product-info">
         <div className="product-in-card-product-info-checkbox-wrapper">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onChange={() => handleCheckboxTicked(product.id)}
+            checked={product.checked}
+          />
         </div>
         <div className="product-in-card-product-info-name-wrapper">
           <div className="product-in-card-product-info-name-image-wrapper">
