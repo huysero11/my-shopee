@@ -7,6 +7,7 @@ import ProductDetailMain from "../ProductDetailMain/ProductDetailMain.jsx";
 import ProductDesription from "../ProductDescription/ProductDesription.jsx";
 import ProductRatings from "../ProductRatings/ProductRatings.jsx";
 import PoppedUpNoti from "../../components/PoppedUpNoti/PoppedUpNoti";
+import AppFooter from "../AppFooter/AppFooter";
 import "./ProductDetail.css";
 
 const ProductDetail = () => {
@@ -25,15 +26,16 @@ const ProductDetail = () => {
       <ProductSeller product={product} />
       <ProductDesription product={product} />
       <ProductRatings product={product} />
+      <AppFooter />
 
-      <div
+      {/* <div
         className="box"
         style={{
           height: "400px",
           backgroundColor: "white",
           margin: "20px 30px",
         }}
-      ></div>
+      ></div> */}
     </>
   );
 };
